@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
 int main() {
-	int min; // User input: Minutes
-	int hrs, minRem; // Hours, & min
-//remaining
-	cout << "Enter minutes: ";
-	cin >> min;
-	hrs = min / 60;
+	
+	int min, hrs, newHrs, minRem;
+
+	cout << "Enter hours: "; cin >> hrs;
+	cout << "Enter min: "; cin >> min;
 	minRem = min % 60;
-	cout << min << " minutes is ";
-	cout << hrs << " hours and ";
-	cout << minRem << " minutes.\n";
-	return 0;
+	newHrs = hrs + (min / 60);
+	cout << hrs << " hours and " << min
+		<< " minutes is " << newHrs << " hours and " << minRem << " minutes." << endl;
+
 }
